@@ -1,0 +1,130 @@
+@import url(https://fonts.google.com/specimen/Outfit);
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Outfit&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap);
+
+ :root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --White: hsl(0, 0%, 100%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Very-dark-blue-main-BG);
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.card-1{
+    background-color: var(--Very-dark-blue-card-BG);
+    border-radius: 10px;
+    height: 39rem; 
+    width: 21rem;
+    padding: 25px;
+}
+
+.img-eq {
+    height: 21rem;
+    margin-left: .5rem;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 20rem;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth effect */
+  }
+  
+  /* Change the background-color and text color when hovering */
+.over-lay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: var(--Cyan);
+  transition: background-color 0.3s ease;
+  opacity: 0;
+}
+
+.img-eq:hover {
+    background-color: var(--Cyan);
+
+  }
+  
+
+.title{
+     color: var(--White);
+     font-family: 'Outfit', sans-serif;
+     margin-bottom: 20px;
+}
+
+.txt{
+    font-family: 'Outfit', sans-serif;
+    color: var(--Soft-blue);
+    font-size: 18px;
+    line-height: 1.9rem;
+}
+
+.amount{
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+    color: var(--Cyan);
+    font-family: 'Outfit', sans-serif;
+    padding: 12px;
+    font-size: 15px;
+}
+
+.amount > p{
+    color: var(--Soft-blue);
+
+}
+
+.amount img{
+    display: flex;
+    float: left;
+    margin-right: 10px;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: var(--White);
+    font-family: 'Outfit', sans-serif;;
+    font-size: 16px;
+    float: left;
+    margin-top: 30px;
+}
+
+.sub-txt{
+    color: var(--Soft-blue);
+}
+
+.info >img{
+    background-color: var(--White);
+    border-radius: 50%; /* Make the image circular */
+    border: 2px solid var(--White); /* Add a 4px white border around the image */
+    width: 40px; /* Set the width of the image */
+    height: 40px; /* Set the height of the image */
+}
+
+@media only screen and (max-width: 560px){
+   .card{
+    flex-direction: column;
+   }
+}
